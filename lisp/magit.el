@@ -1443,7 +1443,7 @@ changes.
     (list branch start args)))
 
 ;;;###autoload
-(defun magit-branch-spinoff (branch &rest args)
+(defun magit-branch-spinoff (branch base &rest args)
   "Create new branch from the unpushed commits.
 
 Create and checkout a new branch starting at and tracking the
@@ -1461,16 +1461,17 @@ current branch will be used as the starting point as usual, but
 the upstream of the starting-point may be used as the upstream
 of the new branch, instead of the starting-point itself."
   (interactive (list (magit-read-string "Spin off branch")
+                     (last (magit-region-values 'commit))
                      (magit-branch-arguments)))
   (when (magit-branch-p branch)
     (user-error "Branch %s already exists" branch))
   (-if-let (current (magit-get-current-branch))
-      (let (tracked base)
+      (let (tracked)
         (magit-call-git "checkout" args "-b" branch current)
         (--when-let (magit-get-indirect-upstream-branch current)
           (magit-call-git "branch" "--set-upstream-to" it branch))
         (when (and (setq tracked (magit-get-upstream-branch current))
-                   (setq base (magit-git-string "merge-base" current tracked))
+                   (setq base (or base (magit-git-string "merge-base" current tracked)))
                    (not (magit-rev-eq base current)))
           (magit-call-git "update-ref" "-m"
                           (format "reset: moving to %s" base)

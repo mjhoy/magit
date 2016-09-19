@@ -1,17 +1,5 @@
-<p align="center"><img src="https://magit.vc/img/magit.png"/></p>
-<h1 align="center">It's Magit!</h1>
-<h2 align="center">A Git Porcelain inside Emacs</h2>
-<p align="center">
-  <a href="https://magit.vc"><b>homepage</b></a> |
-  <a href="https://magit.vc/manual"><b>manual</b></a> |
-  <a href="https://magit.vc/manual/magit/FAQ.html"><b>faq</b></a> |
-  <a href="https://github.com/magit/magit/wiki"><b>wiki</b></a> |
-  <a href="https://groups.google.com/forum/?fromgroups#!forum/magit"><b>mailing list</b></a> |
-  <a href="https://emacs.stackexchange.com/questions/tagged/magit"><b>forum</b></a> |
-  <a href="https://gitter.im/magit/magit"><b>chat</b></a> |
-  <a href="https://twitter.com/magit_emacs"><b>news</b></a>
-</p>
-***
+It's Magit! A Git Porcelain inside Emacs
+========================================
 
 <p align="justify">
   Magit is an interface to the version control system
@@ -24,6 +12,20 @@
   from within Emacs.  While many fine Git clients exist, only Magit
   and Git itself deserve to be called porcelains.
   <a href="https://magit.vc/about.html">(more)</a>
+</p>
+
+<p align="center"><img src="https://magit.vc/screenshots/status.png"/></p>
+
+***
+<p align="center">
+  <a href="https://magit.vc"><b>homepage</b></a> |
+  <a href="https://magit.vc/manual"><b>manual</b></a> |
+  <a href="https://magit.vc/manual/magit/FAQ.html"><b>faq</b></a> |
+  <a href="https://github.com/magit/magit/wiki"><b>wiki</b></a> |
+  <a href="https://groups.google.com/forum/?fromgroups#!forum/magit"><b>mailing list</b></a> |
+  <a href="https://emacs.stackexchange.com/questions/tagged/magit"><b>forum</b></a> |
+  <a href="https://gitter.im/magit/magit"><b>chat</b></a> |
+  <a href="https://twitter.com/magit_emacs"><b>news</b></a>
 </p>
 ***
 
